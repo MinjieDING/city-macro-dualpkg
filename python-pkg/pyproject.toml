@@ -25,9 +25,9 @@ classifiers = [
 ]
 
 [project.urls]
-Homepage = "https://example.com/city-macro-data"
-Repository = "https://example.com/city-macro-data-repo"
-Issues = "https://example.com/city-macro-data/issues"
+Homepage = "https://example.com/MinjieDING/city-macro-data"
+Repository = "https://example.com/MinjieDING/city-macro-data-repo"
+Issues = "https://example.com/MinjieDING/city-macro-data/issues"
 
 [tool.setuptools]
 package-dir = {"" = "src"}
