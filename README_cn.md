@@ -45,4 +45,10 @@ validate_data()
 数据集中包含年份、城市、地区生产总值、常住人口、产业结构、财政收支等指标。  
 具体字段请以 `load_data()` 返回结果中的列名为准。
 
+## 引用与作者标识
+
+- 仓库地址：[MinjieDING/city-macro-dualpkg](https://github.com/MinjieDING/city-macro-dualpkg)
+- ORCID：[0000-0002-9673-1072](https://orcid.org/0000-0002-9673-1072)
+- 引用元数据已提供在 `CITATION.cff`。
+
 

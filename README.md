@@ -44,3 +44,9 @@ validate_data()
 
 The dataset includes indicators such as year, city, GDP, resident population, industrial structure, and fiscal revenue/expenditure.  
 Please use the column names in the output of `load_data()` as the source of truth.
+
+## Citation and Author ID
+
+- Repository: [MinjieDING/city-macro-dualpkg](https://github.com/MinjieDING/city-macro-dualpkg)
+- ORCID: [0000-0002-9673-1072](https://orcid.org/0000-0002-9673-1072)
+- Citation metadata is provided in `CITATION.cff`.

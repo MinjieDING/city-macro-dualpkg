@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+title: city-macro-data
+message: "If you use this software, please cite it as below."
+type: software
+authors:
+  - family-names: DING
+    given-names: Minjie
+    orcid: "https://orcid.org/0000-0002-9673-1072"
+repository-code: "https://github.com/MinjieDING/city-macro-dualpkg"
+url: "https://github.com/MinjieDING/city-macro-dualpkg"
+license: MIT

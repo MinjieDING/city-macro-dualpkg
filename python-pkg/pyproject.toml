@@ -31,6 +31,7 @@ classifiers = [
 Homepage = "https://github.com/MinjieDING/city-macro-dualpkg"
 Repository = "https://github.com/MinjieDING/city-macro-dualpkg"
 Issues = "https://github.com/MinjieDING/city-macro-dualpkg/issues"
+ORCID = "https://orcid.org/0000-0002-9673-1072"
 
 [tool.setuptools]
 package-dir = {"" = "src"}
