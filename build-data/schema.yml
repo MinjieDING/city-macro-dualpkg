@@ -1,0 +1,7 @@
+dataset: city_macro
+primary_keys:
+  - city
+  - year
+required_columns: []
+notes: |
+  Fill required_columns after finalizing your standardized table schema.

@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "city-macro-data"
+version = "0.1.0"
+description = "City macro dataset distributed as a Python package."
+readme = "README.md"
+license = "MIT"
+authors = [
+  {name = "Data Team"}
+]
+requires-python = ">=3.9"
+dependencies = [
+  "pandas>=2.0",
+  "openpyxl>=3.1.5"
+]
+keywords = ["city", "macro", "dataset", "economics", "china"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "Operating System :: OS Independent",
+  "Topic :: Scientific/Engineering :: Information Analysis"
+]
+
+[project.urls]
+Homepage = "https://example.com/city-macro-data"
+Repository = "https://example.com/city-macro-data-repo"
+Issues = "https://example.com/city-macro-data/issues"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+city_macro_data = ["data/*.csv", "data/*.json"]
