@@ -1,33 +1,46 @@
-# city-macro-dualpkg
+# city-macro-data
 
-Minimal monorepo template for distributing the same city macro dataset as both:
+`city-macro-data` is a Python package for distributing China's city-level macroeconomic data.  
+After installation, you can directly load the built-in dataset, inspect metadata, and run basic data validation. It is suitable for teaching, coursework, and quick starts for empirical analysis.
 
-- a Python package (`city-macro-data`)
-- an R package (`citymacrodata`)
+## Contents
 
-## Repository layout
+- Standardized city panel dataset (CSV)
+- Matching metadata (JSON), including data version, build time, and field information
+- A concise and stable Python API
 
-- `data-src/`: raw source files (Excel)
-- `build-data/`: one build script to standardize data
-- `dist-data/`: canonical outputs (`city_macro.csv`, `metadata.json`)
-- `python-pkg/`: installable Python package
-- `r-pkg/`: installable R package
-- `scripts/sync_packages.ps1`: copy `dist-data` into both packages
+## Installation
 
-## Quick start
+Install from PyPI (available after release):
 
-1. Put your Excel file in `data-src/` (default name: `city_macro.xlsx`).
-2. Build standard data:
-   - `python build-data/build_data.py`
-3. Sync data to Python and R packages:
-   - `powershell -ExecutionPolicy Bypass -File scripts/sync_packages.ps1`
-4. Install Python package locally:
-   - `pip install -e python-pkg`
-5. Build/check R package:
-   - `R CMD build r-pkg`
-   - `R CMD check citymacrodata_0.1.0.tar.gz`
+```bash
+pip install city-macro-data
+```
 
-## API parity
+## Quick Start
 
-- Python: `load_data()`, `get_metadata()`, `data_version()`
-- R: `load_data()`, `get_metadata()`, `data_version()`
+```python
+from city_macro_data import load_data, get_metadata, data_version, validate_data
+
+df = load_data()
+meta = get_metadata()
+
+print(df.shape)
+print(data_version())
+print(meta.keys())
+
+# Basic validation (non-empty checks, required columns, etc.)
+validate_data()
+```
+
+## Main API
+
+- `load_data()`: Load data and return a `pandas.DataFrame`
+- `get_metadata()`: Load metadata and return a dictionary
+- `data_version()`: Return the current data version
+- `validate_data(required_columns=None)`: Run basic data quality checks
+
+## Example Fields
+
+The dataset includes indicators such as year, city, GDP, resident population, industrial structure, and fiscal revenue/expenditure.  
+Please use the column names in the output of `load_data()` as the source of truth.
